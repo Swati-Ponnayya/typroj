@@ -1,0 +1,252 @@
+/* Search Bar */
+/* .searchBar {
+    margin-top: 6vh;
+}
+
+.searchIcon {
+    height: 5.3vh;
+    width: 2.5vw;
+    background: none;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    box-sizing: border-box;
+    position: absolute;
+}
+
+.searchIcon svg {
+    fill: black;
+    padding: 0;
+    font-size: 1.3em;
+}
+
+.searchBar input {
+    width: 20vw;
+    padding-left: 3vw;
+    height: 5.3vh;
+    box-sizing: border-box;
+    border: 1px;
+    border-left: 0;
+    border-style: solid;
+    border-color: black;
+} */
+
+/* Search Bar End */
+
+.main hr {
+    /* margin-top: 6vh; */
+    border: 0.5px #B7472A solid;
+    background-color: #B7472A;
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    top: 145px
+}
+
+/* display ingredient */
+
+.ing_head {
+    padding: 5px;
+    border-bottom: black 1px solid;
+    text-transform: capitalize;
+    font-size: 1.4em;
+    background-color: white;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.Ing_list {
+    width: 60vw;
+    border: 1px black solid;
+    margin: 30px auto 30px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.Ing {
+    width: 60vw;
+    height: 25vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding: 5px;
+    box-sizing: border-box;
+    margin: 3px;
+}
+
+.Ing::-webkit-scrollbar {
+    width: 5px;
+}
+
+.Ing::-webkit-scrollbar-thumb {
+    background-color: #cacaca;
+}
+
+.Ing button {
+    margin: 3px;
+    border-radius: 10px;
+    border: 0px;
+    padding: 4px 10px;
+    font-size: 1em;
+    background-color: #FFD5AB;
+}
+
+/* End display ingredient*/
+.message {
+    width: 30vw;
+    background-color: rgba(104, 101, 101, 0.1);
+    align-items: center;
+    margin: 10px auto;
+    padding: 1px;
+    height: auto;
+}
+
+/* display of seleted ingredient & find button */
+.Display {
+    height: 80px;
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    background-color: white;
+    top: 65px;
+}
+
+.find {
+    width: 8vw;
+    border-left: #B7472A 2px solid;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 3vh 3vh 0 2vh;
+    position: absolute;
+    /* top: 10vh; */
+    right: 1vw;
+}
+
+.find button {
+    border-radius: 10px;
+    border: 0px;
+    font-size: 1em;
+    background-color: #EB9788;
+    margin: 4px;
+    padding: 4px 10px;
+    height: 50px;
+    width: 9vw;
+    margin-left: 1vh;
+}
+
+.sel_ing {
+    height: 50px;
+    width: 82vw;
+    margin: 4vh 5vh 0 2vh;
+    overflow: scroll;
+    overflow-y: hidden;
+    overflow-wrap: normal;
+    display: flex;
+    flex-direction: row;
+    display: inline-flex;
+    position: absolute;
+    left: 5px;
+    box-sizing: border-box;
+}
+
+.ing_sel {
+    margin: 4px;
+    border-radius: 10px;
+    border: 0px;
+    padding: 5px 8px;
+    width: auto;
+    height: 38px;
+    font-size: 0.9em;
+    background-color: #FFD5AB;
+}
+
+.sel_ing::-webkit-scrollbar {
+    width: 1px;
+    height: 6px;
+}
+
+.sel_ing::-webkit-scrollbar-thumb {
+    background-color: #cacaca;
+    border-radius: 30px;
+
+}
+
+/* end of seleted ingredient */
+
+@media screen and (max-width: 992px) {
+
+    .Ing_list,
+    .Ing {
+        width: 75vw;
+    }
+
+    .find {
+        right: 8vw;
+    }
+
+    .find button {
+        width: 15vw;
+        font-size: 1em;
+        height: 45px;
+        margin-left: 10px;
+    }
+
+    .sel_ing {
+        width: 75vw;
+        margin-top: 3vh;
+    }
+
+    .sel_ing svg {
+        fill: black;
+        height: 0.2vh;
+        stroke-width: 2px;
+    }
+
+    .display {
+        margin-bottom: 2vh;
+
+    }
+
+    .message {
+        width: 50vw;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .Ing_list,
+    .Ing {
+        width: 85vw;
+        padding: 0;
+        font-size: 0.9em;
+    }
+
+    .find {
+        right: 13vw;
+    }
+
+    .find button {
+        width: 21vw;
+    }
+
+    .sel_ing {
+        width: 65vw;
+    }
+
+    .ing_head {
+        font-size: 1.4em;
+    }
+
+    .message {
+        width: 80vw;
+        height: auto;
+        font-size: 0.8em;
+    }
+}
+
+.sel_ing svg {
+    fill: black;
+    height: 2vh;
+    stroke-width: 2.5px;
+}

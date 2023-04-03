@@ -1,0 +1,97 @@
+.Settings {
+  /* background-color: #B7472A; */
+  /* background-color: white; */
+  margin: 5vh auto auto auto;
+  padding: 20px;
+  width: 35vw;
+  height: auto;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  text-align: left;
+}
+
+.Settings a {
+  font-size: 1.1em;
+  text-transform: uppercase;
+}
+
+.Settings input {
+  border-color: #B7472A;
+  padding: 6px;
+  width: 25vw;
+  height: 3vh;
+  border-radius: 10px;
+  margin-top: 0;
+}
+
+.Settings input[type=submit] {
+  background-color: snow;
+  box-sizing: border-box;
+  color: #B7472A;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 5px;
+  width: auto;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 2vh;
+}
+
+.Settings h1 {
+  font-size: 1.8em;
+}
+
+.Settings h3 {
+  margin-top: 5vh;
+  box-sizing: border-box;
+  font-size: 1.1em;
+}
+
+@media screen and (max-width: 992px) {
+  .Settings {
+    width: 60vw;
+  }
+
+  .Settings input {
+    width: 45vw;
+    height: 2.8vh;
+    font-size: 0.9em
+      /* margin-top: 4vh; */
+  }
+
+  .Settings input[type=submit] {
+    height: auto;
+    margin-top: 3vh;
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Settings {
+    width: 75vw;
+  }
+
+  .Settings input {
+    width: 60vw;
+    height: 2.5vh;
+    margin-top: 2vh;
+    font-size: 0.8em;
+  }
+
+  .Settings input[type=submit] {
+    height: auto;
+    margin-top: 3vh;
+    font-size: 0.8em;
+  }
+
+  .Settings h1 {
+    font-size: 1.4em;
+  }
+
+  .Settings h3 {
+    font-size: 0.9em;
+  }
+
+
+}

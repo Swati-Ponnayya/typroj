@@ -1,0 +1,121 @@
+.Suggestion {
+    background-color: #B7472A;
+    margin: 5vh auto auto auto;
+    padding: 10px;
+    width: 35vw;
+    height: 450px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.Suggestion h1 {
+    color: whitesmoke;
+}
+
+
+.Suggestion h3 a {
+    font-size: 1.1em;
+    text-transform: uppercase;
+}
+
+.Suggestion input {
+    border-color: #B7472A;
+    padding: 6px;
+    width: 25vw;
+    height: 3vh;
+    border-radius: 8px;
+    margin-top: 5vh;
+}
+
+.Suggestion textarea{
+    border-color: #B7472A;
+    padding: 10px;
+    width: 25vw;
+    height: 12vh;
+    border-radius: 10px;
+    margin-top: 5vh;  
+}
+
+.Suggestion input[type=submit] {
+    background-color: snow;
+    box-sizing: border-box;
+    color: #B7472A;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 5px;
+    width: 12vw;
+    height: 6vh;
+    border-radius: 15px;
+    margin-top: 4vh;
+}
+
+
+@media screen and (max-width: 992px) {
+    .Suggestion h5 {
+        margin-right: 5vw;
+    }
+
+    .Suggestion {
+        width: 60vw;
+        height: 500px;
+    }
+
+    .Suggestion input {
+        width: 45vw;
+        height: 2.8vh;
+        margin-top: 4vh;
+        font-size: 1em;
+    }
+    .Suggestion textarea{
+        width: 45vw;
+        height: 8vh;
+        margin-top: 3vh;
+        font-size: 1em;
+    }
+
+    .Suggestion input[type=submit] {
+        width: 25vw;
+        height: 6vh;
+        margin-top: 2vh;
+        font-size: 1em;
+    }
+
+    .Suggestion h6,
+    h5 {
+        font-size: 1em;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .Suggestion {
+        width: 75vw;
+        height: 420px;
+    }
+
+    .Suggestion input {
+        width: 60vw;
+        height: 2.5vh;
+        margin-top: 4vh;
+    }
+    .Suggestion textarea {
+        width: 60vw;
+        height: 10vh;
+        margin-top: 4vh;
+    }
+
+    .Suggestion input[type=submit] {
+        width: 25vw;
+        height: 5vh;
+        margin-top: 3vh;
+        font-size: 0.8em;
+    }
+
+    .Suggestion h1 {
+        font-size: 1.6em;
+    }
+
+    .Suggestion h3 {
+        font-size: 0.8em;
+    }
+}

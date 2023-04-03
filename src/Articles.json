@@ -1,0 +1,92 @@
+[
+    {
+        "Id": "1",
+        "Title": "It’s all about the knife skills",
+        "Description": "Professional chefs spend a lot of time chopping, mincing, slicing and dicing. Part of it is to make everything look nice on the plate, but it’s really all about how the food cooks. Getting good with a knife ensures all the ingredients will cook evenly and at the same rate.",
+        "Image": "https://www.tasteofhome.com/wp-content/uploads/2019/08/kitchen-knives-shutterstock_1006765006.jpg?resize=768,768"
+    },
+    {
+        "Id": "2",
+        "Title": "I’ve only found one way to chop onions without tears",
+        "Description": "I’ve heard it all—older onions make you cry more, avoid tears by using a sharp knife, freeze the onions or cut them under running water—but if an onion wants to get you, it will. The only crying-prevention technique that actually works is really silly: wear a pair of goggles. You’ll look like an idiot, and everyone will probably make fun of you, but your mascara will remain intact.",
+        "Image": "https://www.tasteofhome.com/wp-content/uploads/2019/08/rough-male-hands-thinly-chop-white-shutterstock_1281966709.jpg?resize=768,768"
+    },
+    {
+        "Id": "3",
+        "Title": "Use an egg slicer for even portions of fruits and veggies.",
+        "Description": "Professional chefs spend a lot of time chopping, mincing, slicing and dicing. Part of it is to make everything look nice on the plate, but it’s really all about how the food cooks. Getting good with a knife ensures all the ingredients will cook evenly and at the same rate.",
+        "Image": "https://www.eatthis.com/wp-content/uploads/sites/4/2018/07/egg-slicer.jpg?resize=800,586&quality=82&strip=all"
+    },
+    {
+        "Id": "4",
+        "Title": "Bake a cake in a mug.",
+        "Description": "Steer clear of double-serving temptation by baking one cake in a mug (rather than a whole pan). Coat a mug or ramekin with nonstick spray, then crack an egg inside. Whisk until even in consistency, then stir in ¼ cup nut butter or nutella. Microwave for 60 seconds for an ooey-gooey healthy-ish dessert.",
+        "Image": "https://www.eatthis.com/wp-content/uploads/sites/4/2018/10/mug-cake.jpg?resize=800,586&quality=82&strip=all"
+    },
+    {
+        "Id": "5",
+        "Title": "Peel ginger with a spoon.",
+        "Description": "No need for a special tool to de-skin this oddly-shaped root. Because the peel is fairly thin, simply scrape a metal spoon down the side and around the tricky rounded edges of the ginger to flake the skin away.",
+        "Image": "https://www.eatthis.com/wp-content/uploads/sites/4/2018/10/peeled-ginger-with-spoon.jpg?resize=800,586&quality=82&strip=all"
+    },
+    {
+        "Id": "6",
+        "Title": "Roll, crimp, then chill that pastry.",
+        "Description": "Do chill your dough before baking to allow the gluten to relax and the fat to firm up again after you've worked with it. Don't struggle with rolling out rock-hard pie dough. Instead, mix the dough, roll it out (using trick #10), then place it in your pie pan before refrigerating for at least 30 minutes. Fill, bake, and enjoy your low-fuss dessert.",
+        "Image": "https://www.eatthis.com/wp-content/uploads/sites/4/2018/10/chilled-rolled-dough.jpg?resize=800,586&quality=82&strip=all"
+    },
+    {
+        "Id": "7",
+        "Title": "Extend the life of your bananas by wrapping the stems.",
+        "Description": "On the other side of the fruit front, keep your bananas yellow longer by pulling them apart into single-banana units and covering each stem in plastic wrap or foil. The wrap helps contain the naturally-producing ethylene gas to the stem end of the fruit. Otherwise, it would spread to the whole banana and accelerate the ripening.",
+        "Image": "https://www.eatthis.com/wp-content/uploads/sites/4/2018/07/fresh-ripe-banana.jpg?resize=800,586&quality=82&strip=all"
+    },
+    {
+        "Id": "8",
+        "Title": "Destem a strawberry with a straw.",
+        "Description": "Here's a berry easy trick to remove the stem: Insert a plastic straw through the pointy, bottom end of the strawberry and press it straight up to push the leaves out.",
+        "Image": "https://www.eatthis.com/wp-content/uploads/sites/4/media/images/ext/898918057/strawberries-in-bins.jpg?resize=800,586&quality=82&strip=all"
+    },
+    {
+        "Id": "9",
+        "Title": "Coat measuring spoons and cups with cooking spray.",
+        "Description": "Honey, maple syrup, and other sticky ingredients slip right out of measuring cups when you grease them first. Here's how to do so without adding too much extra fat to your recipe: spritz measuring glasses, cups, and spoons with nonstick cooking spray before filling with the main event",
+        "Image": "https://www.eatthis.com/wp-content/uploads/sites/4/2018/06/spraying-cooking-oil.jpg?resize=800,586&quality=82&strip=all"
+    },
+    {
+        "Id": "10",
+        "Title": "Shake garlic cloves in a mason jar to slip the skins off.",
+        "Description": "Control the mess and speed up peeling a pile of garlic cloves by separating them, popping the cloves in a mason jar, and screwing on the lid. Give the jar a good shake and the skins should slide right off, leaving you ready to mince. You can also use the same strategy with two equal-sized bowls, one inverted on top of the other.",
+        "Image": "https://www.eatthis.com/wp-content/uploads/sites/4/media/images/ext/843472899/sprouted-garlic.jpg?resize=800,586&quality=82&strip=all"
+    },
+    {
+        "Id": "11",
+        "Title": "Separate pomegranate seeds in a bowl of water.",
+        "Description": "Keep your clothes stain-free and your mess contained by removing pomegranate arils under water. Score the skin with a knife around the center, peel the halves apart, cut the halves in half again, then place the pomegranate pieces under water. Gently rub the arils to release them from the white membrane (the latter of which will float to the top of the water so you can skim it off). Strain the water from the fruit—and you'll have arils for a far lower investment than the produce aisle cups.",
+        "Image": "https://www.eatthis.com/wp-content/uploads/sites/4/media/images/ext/713700252/pomegranate.jpg?resize=800,586&quality=82&strip=all"
+    },
+    {
+        "Id": "12",
+        "Title": "You can almost always fix a dish.",
+        "Description": "Sometimes, a dish doesn’t turn out the way we thought it would, but you can usually balance out the flavors if they haven’t gone too far off the edge. Fix an over-salted dish by adding a sweet ingredient like honey or sugar. If it’s too fatty and rich, add a splash of vinegar or citrus juice.",
+        "Image": "https://www.tasteofhome.com/wp-content/uploads/2019/03/shutterstock_1028405644-salt-1.jpg?resize=768,768"
+    },
+    {
+        "Id": "13",
+        "Title": "Reheat a slice of pizza.",
+        "Description": "If you're warming a slice, use your skillet. This will help you score a crispy crust and melty cheese all at once, all without turning on your oven. Cook over medium heat for a minute, add a couple drops of water for steam, then put a lid on it. Two to three minutes later, you'll slice will be nice.",
+        "Image": "https://www.eatthis.com/wp-content/uploads/sites/4/2018/10/pizza-in-skillet.jpg?resize=800,586&quality=82&strip=all"
+    },
+    {
+        "Id": "14",
+        "Title": "Cut apples, then reassemble to prevent browning.",
+        "Description": "The secret to brown bag apple slices that are fresh and crisp? The core. Use an apple slicer to create wedges, then press the fruit back into one piece. Hold it in place with a rubber band or two, or wrap with plastic wrap and come lunchtime, you'll notice little to no brown bites. For extra protection from oxidation, squeeze a lemon over the flesh before reassembling and wrapping.",
+        "Image": "https://www.eatthis.com/wp-content/uploads/sites/4/media/images/ext/805882695/Apples.jpg?resize=800,586&quality=82&strip=all"
+    },
+    {
+        "Id": "15",
+        "Title": "Microwave frozen berries to use instead of syrup.",
+        "Description": "For a sweet topping sans all the sugar, drizzle your picture-perfect pancakes with berry sauce. Warm frozen mixed berries in a skillet or saucepan. Strain through a fine-mesh sieve to remove any seeds and spoon over your stack (or waffles or yogurt).",
+        "Image": "https://www.eatthis.com/wp-content/uploads/sites/4/media/images/ext/941191764/frozen-berries.jpg?resize=800,586&quality=82&strip=all"
+    }
+]

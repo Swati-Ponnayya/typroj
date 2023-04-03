@@ -1,0 +1,45 @@
+.Display_P{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.backH h4{
+    color: black;
+    text-align: left;
+    text-decoration: underline;
+    background-color: gainsboro;
+    padding: 10px;
+    margin-top: 0;
+}
+.P_RecipesList {
+    border: 1px black solid;
+    width: 65vw;
+    height: 430px;
+    margin: 20px;
+    border-radius: 5px;
+    text-align: left;
+    color:black;
+    background-color: white;
+}
+.P_RecipesList img {
+    width: 400px;
+    padding: 5px;
+    height: 420px;
+    margin: 1px;
+    float: left;
+    margin-right: 25px;
+}
+.P_RecipesList h3{
+    color: black;
+    font-size: 2em;
+    display: inline-block;
+    text-decoration: underline;
+}
+.P_RecipesList p{
+    color: black;
+    font-size: 1.5em;
+}
+a:-webkit-any-link{
+    text-decoration: none;
+}
