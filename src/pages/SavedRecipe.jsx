@@ -97,7 +97,7 @@ const SavedRecipe = () => {
             <div className='Display_R'>
                 {authUser ? (
                     <> {status ? "Loading..." : ""}
-                        {err ? (<h3>{err}</h3>) : (list.length > 0 ? '' : <h3>Not Saved recipe</h3>)}
+                        {err ? (<h3>{err}</h3>) : (list.length > 0 ? '' : <h3>No Saved recipe</h3>)}
                         {data.map((data1, index) => {
                             return (
                                 <div key={index} className="S_RecipesList">

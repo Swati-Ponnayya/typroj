@@ -87,7 +87,7 @@ function Suggestion() {
 
                             <input type='email' value={authUser.email} readOnly name="from_name"></input>
                             <textarea placeholder="Write Suggestion" name="message" maxLength={1000} onChange={handleChange} value={setsugg.message}></textarea>
-                            <p>{FormsErrors.sugg ? (FormsErrors.sugg) : ""}</p>
+                            {FormsErrors.sugg ? <p>{FormsErrors.sugg} </p>:<p>&nbsp; </p>}
                             <input type='submit' value="Submit" onClick={(event) => sendEmail(event)}></input>
                         </div>
                     ) : (

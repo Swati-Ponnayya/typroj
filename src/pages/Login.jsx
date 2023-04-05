@@ -78,15 +78,16 @@ const Login = () => {
                 <h1>Log In</h1>
                 <div>
                     <input type="email" placeholder="Email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" name="username" onChange={handleChangeLogin} value={loginInfo.username} />
-                    <p>{loginFormErrors.username}</p>
+                    {loginFormErrors.username?<p>{loginFormErrors.username}</p>  :<p>&nbsp; </p>}
                 </div>
                 <div>
                     <input type="password" placeholder="Password" maxLength="10" name="pass" onChange={handleChangeLogin} value={loginInfo.pass} />
-                    <p>{loginFormErrors.pass}</p>
+                    {loginFormErrors.pass? <p>{loginFormErrors.pass}</p>:<p>&nbsp; </p>}
                 </div>
                 <h5 onClick={handleForgottenPassword}>Forget Password </h5>
+                <p className="error">{loginFormErrors.username?"":authorizationError}</p>
                 <input type="submit" value="Login" onClick={handleSubmitLogin} />
-                <p className="error">{authorizationError}</p>
+           
             </form>
             <div>
                 {/* {Object.keys(loginFormErrors).length === 0 && isLoginSubmit ? ("g") : ("")} */}
