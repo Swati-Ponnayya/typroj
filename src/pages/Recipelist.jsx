@@ -9,12 +9,12 @@ import { auth } from "../firebase/firebase";
 import "./Recipelist.css";
 
 const Recipelist = () => {
-    const { state } = useLocation();
-    const { id } = state;
+    // const { state } = useLocation();
+    // const { id } = state;
     const [err, setErr] = useState('');
     const [data, setData] = useState([]);
     // const list = id.Recipelist;
-    const list = [639672, 639673, 639612]
+    const list = [ 62534, 62234]
     const [Saved_R, setsaved_R] = useState([]);
     const [authUser, setAuthUser] = useState(null);
     // key=da1d576ade9846be99f6a854ae590ac0  3d7009d38e2c4ad8aaa806685013cbd5   49785da206294648950f3afd48bb48ca
@@ -30,7 +30,7 @@ const Recipelist = () => {
             list.map(async (idlist) => {
                 // console.log(idlist)
                 try {
-                    const response = await fetch(`https://api.spoonacular.com/recipes/${idlist}/information?apiKey=49785da206294648950f3afd48bb48ca `);
+                    const response = await fetch(`https://api.spoonacular.com/recipes/${idlist}/information?apiKey=3d7009d38e2c4ad8aaa806685013cbd5 `);
                     if (!response.ok) {
                         throw new Error(`Error! status: ${response.status}`);
                     }
@@ -74,7 +74,7 @@ const Recipelist = () => {
                 setData("")
                 setData((recipe) => [...recipe, data1])
             }
-            else setErr("Vegan Recipe Not Found")
+            else setErr("not found")
         });
 
     }
@@ -85,7 +85,18 @@ const Recipelist = () => {
                 setData("")
                 setData((recipe) => [...recipe, data1])
             }
-            else setErr("Vegettarian Recipe Not Found")
+            else setErr("not found")
+        });
+    }
+    const cooktime = () => {
+        setErr("")
+        data.map((data1) => {
+            if (data1.readyInMinutes < 60) {
+                console.log(data1.readyInMinutes)
+                setData("")
+                setData((recipe) => [...recipe, data1])
+            }
+            else setErr("not found")
         });
     }
     const AllRecipe = () => {
@@ -112,24 +123,13 @@ const Recipelist = () => {
             <div className="filter">
                 <button onClick={vegetarian}>vegetarian</button>
                 <button onClick={Vegan}>Vegan</button>
+                <button onClick={cooktime}>Cook time &lt; 60</button>
                 <button onClick={AllRecipe}>Remove filter</button>
             </div>
             <hr/>
             <div className='Display_R'>
                 {err ? <h3>{err}</h3> : (data.length == 0 ? "Recipe Not found" : "")}
-
-                {data.length == 1 ?
-                    <div className="RecipesList">
-                        <button onClick={() => S_recipe(data.id)} className="Save">Save</button>
-                        <img src={data.image} alt={data.title} />
-                        <Link to={data.spoonacularSourceUrl}>
-                            <h3 >{data.title}</h3>
-                        </Link>
-                        <p>Cooking Time :-  {data.readyInMinutes} mintues</p>
-                        <p>Serving :-  {data.servings} person</p>
-                    </div>
-                    :
-                    (data.map((data1, index) => {
+                    {data.map((data1, index) => {
                         return (
                             <div key={index} className="RecipesList">
                                 <button onClick={() => S_recipe(data1.id)} className="Save">Save</button>
@@ -141,8 +141,8 @@ const Recipelist = () => {
                                 <p>Serving :-  {data1.servings} person</p>
                             </div>
                         )
-                    }))
-                }
+                    })}
+                {/* } */}
 
             </div>
         </>
