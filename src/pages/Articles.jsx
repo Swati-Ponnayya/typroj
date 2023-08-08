@@ -8,7 +8,7 @@ function Articles() {
     return (
         <div className="main">
             <Link to="/" className='backH'><h4>&lt; Home</h4></Link>
-            <h1>Cooking Tricks & Tips</h1>
+            <h1 className="head">Cooking Tricks & Tips</h1>
             <div className="display">
                 {Article.map((article) => (
                     <div key={article.Id} className="articles" >

@@ -30,7 +30,7 @@ function Home() {
 		setlist(list.filter(list => list !== value));
 	}
 	
-	console.log(list)
+	// console.log(list)
 	// to fetch Recipe id 
 	// const APIkey =  "3d7009d38e2c4ad8aaa806685013cbd5" da1d576ade9846be99f6a854ae590ac0
 	// const API =` https://api.spoonacular.com/recipes/findByIngredients?apiKey=3d7009d38e2c4ad8aaa806685013cbd5&ingredients=apples,+flour,+sugar`
@@ -41,6 +41,7 @@ function Home() {
 
 	// fetching the Recipe id from api 
 	const fetchRecipe = async () => {
+		 // apikey=da1d576ade9846be99f6a854ae590ac0  3d7009d38e2c4ad8aaa806685013cbd5   49785da206294648950f3afd48bb48ca
 		setIsLoading(true);
 		try {
 			const response = await fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=da1d576ade9846be99f6a854ae590ac0&ingredients=${list} `);
@@ -68,7 +69,7 @@ function Home() {
 	return (
 		<div className="main">
 			<div className="Display">
-				{/* Displaying ingredient */}
+				{/* Deleting ingredient */}
 				<div className="sel_ing">
 					{list.map((ing, index) => (
 						<button key={index} className="ing_sel " value={ing} onClick={() => ing_delete(ing)} >{ing} <Tfi.TfiClose /> </button>

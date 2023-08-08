@@ -21,7 +21,7 @@ function App() {
         <Navheader />
         <Routes>
           <Route exact path='/' element={<Home />} />
-          <Route exact path="/recipelist" element={<Recipelist />} />
+          <Route exact path='/recipelist' element={<Recipelist />} />
           <Route exact path='/suggestion' element={<Suggestion />} />
           <Route exact path='/articles' element={<Articles />} />
           <Route exact path='/login' element={<Login />} />

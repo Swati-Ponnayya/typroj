@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { db } from "../firebase/firebase";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -9,15 +9,16 @@ import { auth } from "../firebase/firebase";
 import "./Recipelist.css";
 
 const Recipelist = () => {
+    const navigate = useNavigate();
     const { state } = useLocation();
     const { id } = state;
     const [err, setErr] = useState('');
     const [data, setData] = useState([]);
-    // const list = id.Recipelist;
-    const list = [639672, 639673, 639612]
+    const list = id.Recipelist;
+    // const list = [639672, 639673, 639612]
     const [Saved_R, setsaved_R] = useState([]);
     const [authUser, setAuthUser] = useState(null);
-    // key=da1d576ade9846be99f6a854ae590ac0  3d7009d38e2c4ad8aaa806685013cbd5   49785da206294648950f3afd48bb48ca
+    // key=da1d576ade9846be99f6a854ae590ac0   3d7009d38e2c4ad8aaa806685013cbd5   49785da206294648950f3afd48bb48ca
     useEffect(() => {
         const listen = onAuthStateChanged(auth, (user) => {
             if (user) {
@@ -30,7 +31,7 @@ const Recipelist = () => {
             list.map(async (idlist) => {
                 // console.log(idlist)
                 try {
-                    const response = await fetch(`https://api.spoonacular.com/recipes/${idlist}/information?apiKey=49785da206294648950f3afd48bb48ca `);
+                    const response = await fetch(`https://api.spoonacular.com/recipes/${idlist}/information?apiKey=3d7009d38e2c4ad8aaa806685013cbd5 `);
                     if (!response.ok) {
                         throw new Error(`Error! status: ${response.status}`);
                     }
@@ -59,19 +60,20 @@ const Recipelist = () => {
                 push(ref(db, `${auth.currentUser.uid}`), {
                     Saved_R
                 })
-                    (toast.success("Saved Recipe", { autoClose: 1000 }))
+                    (toast.success("Saved Recipe", { autoClose: 2000 })
+                        (<Link to='/Recipelist'></Link>)
+                    )
             ) : (
                 alert("To save recipe you have to login")
             )
         }
     }
-
+    // filters
     const Vegan = () => {
         setErr("")
         data.map((data1) => {
             if (data1.vegan) {
-                console.log(data1.vegan)
-                setData("")
+                // console.log(data1.vegan)
                 setData((recipe) => [...recipe, data1])
             }
             else setErr("Vegan Recipe Not Found")
@@ -82,18 +84,28 @@ const Recipelist = () => {
         setErr("")
         data.map((data1) => {
             if (data1.vegetarian) {
-                setData("")
                 setData((recipe) => [...recipe, data1])
             }
-            else setErr("Vegettarian Recipe Not Found")
+            else setErr("Vegetarian Recipe Not Found")
+        });
+    }
+
+    const cooktime = () => {
+        setErr("")
+        data.map((data1) => {
+            if (data1.readyInMinutes< 60) {
+                setData((recipe) => [...recipe, data1])
+            }
+            else setErr(" Recipe Not Found")
         });
     }
     const AllRecipe = () => {
         setErr("")
         list.map(async (idlist) => {
+            // apikey=da1d576ade9846be99f6a854ae590ac0  3d7009d38e2c4ad8aaa806685013cbd5   49785da206294648950f3afd48bb48ca
             // console.log(idlist)
             try {
-                const response = await fetch(`https://api.spoonacular.com/recipes/${idlist}/information?apiKey=3d7009d38e2c4ad8aaa806685013cbd5 `);
+                const response = await fetch(`https://api.spoonacular.com/recipes/${idlist}/information?apiKey=da1d576ade9846be99f6a854ae590ac0 `);
                 if (!response.ok) {
                     throw new Error(`Error! status: ${response.status}`);
                 }
@@ -112,9 +124,10 @@ const Recipelist = () => {
             <div className="filter">
                 <button onClick={vegetarian}>vegetarian</button>
                 <button onClick={Vegan}>Vegan</button>
+                <button onClick={cooktime}>cooking time &lt;60</button>
                 <button onClick={AllRecipe}>Remove filter</button>
             </div>
-            <hr/>
+            <hr />
             <div className='Display_R'>
                 {err ? <h3>{err}</h3> : (data.length == 0 ? "Recipe Not found" : "")}
 

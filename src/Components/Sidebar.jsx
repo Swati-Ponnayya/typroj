@@ -43,12 +43,6 @@ export const SidebarData = [
     icon: <IoIcons.IoMdHelpCircle />,
     cName: 'nav-text'
   },
-  // {
-  //   title: 'Help',
-  //   path: '/help',
-  //   icon: <IoIcons.IoMdPeople />,
-  //   cName: 'nav-text'
-  // },
   {
     title: 'Settings',
     path: '/settings',

@@ -30,16 +30,16 @@ function Suggestion() {
             console.log(text.length)
             if (sugg !== "" && text.length > 0) {
 
-                // await emailjs.sendForm('service_wv5adxd', 'template_uo5g3dg', form.current, 'nJRZV4gYir0iIzzKq')
-                //     .then((result) => {
-                //         alert("Thanks for submitting the suggestion")
-                //         navigate("/")
-                //         // show the user a success message
-                //     }, (error) => {
-                //         // show the user an error
-                //     });
-                // setFormsErrors("")
-                console.log("in")
+                await emailjs.sendForm('service_wv5adxd', 'template_uo5g3dg', form.current, 'nJRZV4gYir0iIzzKq')
+                    .then((result) => {
+                        alert("Thanks for submitting the suggestion")
+                        navigate("/")
+                        // show the user a success message
+                    }, (error) => {
+                        // show the user an error
+                    });
+                setFormsErrors("")
+                // console.log("in")
             }
         }
     };

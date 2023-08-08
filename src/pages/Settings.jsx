@@ -3,6 +3,7 @@ import { getAuth, updateEmail, onAuthStateChanged, deleteUser, reauthenticateWit
 import { auth } from "../firebase/firebase";
 import "./Settings.css"
 import { Link } from "react-router-dom";
+import { Signout } from '../Components/Signout';
 function Settings() {
     const [loginInfo, setLoginInfo] = useState({ username: "", pass: "" });
     const [authUser, setAuthUser] = useState(null);
@@ -31,15 +32,17 @@ function Settings() {
         };
     }, []);
     // console.log(loginInfo.username)
+    // to delete account 
     const deleteUsername = async () => {
         await deleteUser(auth.currentUser).then(() => {
             // User deleted.
             alert("The account has been Deleted.")
         }).catch((error) => {
             // An error ocurred
-            // ...
         });
     }
+    
+    // to update 
     const updateUsername = async () => {
         await updateEmail(auth.currentUser, loginInfo.username).then(() => {
             // Email updated!
@@ -47,16 +50,14 @@ function Settings() {
             // ...
         }).catch((error) => {
             // An error occurred
-            // ...
         });
     }
     const Updatepassword = async () => {
         updatePassword(auth.currentUser, loginInfo.pass).then(() => {
-            // Update successful.
+            // Password Update successful.
             alert("Password updated")
         }).catch((error) => {
             // An error ocurred
-            // ...
         });
     }
 
@@ -76,6 +77,11 @@ function Settings() {
 
                     <h3>To delete the Account permanently</h3>
                     <input type="submit" value="Delete Account" onClick={deleteUsername}></input>
+
+                    <h3>To Logout </h3>
+                    <Link to='/signout'> <input type="submit" value="Log out "></input>
+                    </Link>
+
                 </>) : (<h3>To change the account setting You must <Link to='/login'>Login</Link>  First</h3>)}
             </div>
         </>

@@ -33,18 +33,18 @@ const Signup = () => {
         const text2 = signup.pass.trim()
         // console.log(signup.pass)
         // creating user account
-        if (signup !== "" && signup.pass.length >= 6 && signup.username.length >= 6 && text.length > 0 && text2.length === signup.pass.length && regex.test(signup.username) && regex.test(signup.pass)) {
-
+        if (signup !== "" && signup.pass.length >= 6 && signup.pass.length <= 10 && text.length > 0 && text2.length === signup.pass.length && regex.test(signup.username) && regexp.test(signup.pass)) {
             await createUserWithEmailAndPassword(auth, signup.username, signup.pass)
                 .then((userCredential) => {
                     // console.log(userCredential);
                     navigate("/login")
                 })
                 .catch((error) => {
-                    console.log(error);
+                    // console.log(error);
+                    // if user use already use email it will alert and navigate to login.
                     if (error.code === "auth/email-already-in-use") {
-                        alert("Email already in use.")
-                        window.location.reload();
+                        alert("Email already in use.\nYou can Login");
+                        navigate("/login")
                     }
                 });
             setSignup("")
@@ -93,7 +93,6 @@ const Signup = () => {
                 <input type="submit" value="signup" onClick={handleSubmitsignup} />
             </form>
             <div>
-                {/* {Object.keys(signupFormsErrors).length === 0 && issignupSubmit ? ("hello") : ("")} */}
                 <h6>Have an account <Link to="/login" >Log In</Link></h6>
             </div>
         </div>

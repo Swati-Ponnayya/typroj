@@ -1,10 +1,11 @@
-.Display_P{
+.Display_P {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
-.backH h4{
+
+.backH h4 {
     color: black;
     text-align: left;
     text-decoration: underline;
@@ -12,34 +13,115 @@
     padding: 10px;
     margin-top: 0;
 }
+
 .P_RecipesList {
     border: 1px black solid;
     width: 65vw;
-    height: 430px;
+    height: 400px;
     margin: 20px;
     border-radius: 5px;
     text-align: left;
-    color:black;
+    color: black;
     background-color: white;
 }
+
 .P_RecipesList img {
-    width: 400px;
+    width: 25vw;
     padding: 5px;
-    height: 420px;
+    height: 50vh;
     margin: 1px;
     float: left;
     margin-right: 25px;
 }
-.P_RecipesList h3{
+
+.P_RecipesList h3 {
     color: black;
     font-size: 2em;
     display: inline-block;
     text-decoration: underline;
 }
-.P_RecipesList p{
+
+.P_RecipesList p {
     color: black;
     font-size: 1.5em;
 }
-a:-webkit-any-link{
+
+a:-webkit-any-link {
     text-decoration: none;
+}
+
+@media screen and (max-width :1050px) {
+    .P_RecipesList img {
+        width: 15vw;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .P_RecipesList {
+        width: 60vw;
+        height: auto;
+        text-align: center;
+    }
+
+    .P_RecipesList img {
+        width: 34vw;
+        height: auto;
+        display: block;
+        margin: 25px auto 10px auto;
+        float: none;
+    }
+
+    .P_RecipesList h3 {
+        font-size: 1.2em;
+        margin-top: 0;
+    }
+
+    .P_RecipesList p {
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    .P_RecipesList {
+        width: 80vw;
+    }
+
+    .P_RecipesList h3 {
+        font-size: 1em;
+    }
+
+    .P_RecipesList p {
+        font-size: 0.8em;
+    }
+
+    .P_RecipesList img {
+        width: 50vw;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .head {
+        font-size: 1.4em;
+    }
+
+    .P_RecipesList {
+        width: 80vw;
+    }
+
+    .P_RecipesList h3 {
+        font-size: 1em;
+    }
+
+    .P_RecipesList p {
+        font-size: 0.8em;
+    }
+
+    .P_RecipesList img {
+        width: 35vw;
+        height: 15vh;
+    }
 }

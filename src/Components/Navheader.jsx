@@ -6,7 +6,6 @@ import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import { SidebarData } from './Sidebar';
 import { onAuthStateChanged } from "firebase/auth";
-// import React, { useEffect, useState } from "react";
 import { auth } from "../firebase/firebase";
 
 function Navheader() {
@@ -42,11 +41,14 @@ function Navheader() {
             </div>
 
             <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+
                 {sidebar ? <style>{`
                     .Display, .main hr , sel-ing{
                         position:static;
                     }`}
                 </style> : ""}
+                
+                {/* sidebar  */}
                 <ul className='nav-menu-items' onClick={showSidebar} >
                     <li className='navbar-toggle'>
                         <button to='#' className='menu-bars'>
@@ -65,13 +67,13 @@ function Navheader() {
                     })}
                 </ul>
             </nav> <a href="/"><h2 className="h2">Cook Now</h2></a>
+            {/* user name and login & signup page */}
             <div className="User_info">
                 {authUser ? (
                     <p>{authUser.email.replace(/@[^@]+$/, '')}</p>
                 ) : (
                     <p>Log Out</p>
                 )}
-                {/* <Link to="/login"> */}
                 {authUser ? <Link to="/signOut">
                     <img src={Logo} alt="account_circle.png" />
                 </Link> : <Link to="/login">

@@ -10,7 +10,7 @@ const PopularRecipe = () => {
     useEffect(() => {
         const data2 = async () => {
             try {
-                const response = await fetch(`https://api.spoonacular.com/recipes/random?number=1&apiKey=da1d576ade9846be99f6a854ae590ac0`);
+                const response = await fetch(`https://api.spoonacular.com/recipes/random?number=1&apiKey=49785da206294648950f3afd48bb48ca`);
                 if (!response.ok) {
                     throw new Error(`Error! status: ${response.status}`);
                 }
@@ -26,7 +26,7 @@ const PopularRecipe = () => {
     return (
         <>
             <Link to="/" className='backH'><h4>&lt; Home</h4></Link>
-            <h1>Popular Recipe</h1>
+            <h1 className='head'>Popular Recipe</h1>
             <div className='Display_P'>
                 {err && <h3>{err}</h3>}
                 {data.map((data1, index) => {

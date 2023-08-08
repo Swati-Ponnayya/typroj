@@ -89,7 +89,6 @@ const Login = () => {
                 <p className="error">{authorizationError}</p>
             </form>
             <div>
-                {/* {Object.keys(loginFormErrors).length === 0 && isLoginSubmit ? ("g") : ("")} */}
                 <h6>Don't have an account <Link to="/signup" >Sign In</Link></h6>
             </div>
         </div>

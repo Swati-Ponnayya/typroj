@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link ,useNavigate} from 'react-router-dom';
 import { db } from "../firebase/firebase";
 import { ref, onValue, remove } from "firebase/database";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../firebase/firebase";
 import "./SavedRecipe.css";
-import { async } from '@firebase/util';
 
 const SavedRecipe = () => {
+    const navigate = useNavigate();
     const [err, setErr] = useState('');
     const [data, setData] = useState([]);
     const [list, setList] = useState([]);
@@ -16,7 +16,7 @@ const SavedRecipe = () => {
     const [status, setstatus] = useState(false);
     var currentuser = "";
     let records = [];
-    // let nkey = [];
+
     useEffect(() => {
         // to get the current user uid
         const listen = onAuthStateChanged(auth, (user) => {
@@ -29,26 +29,28 @@ const SavedRecipe = () => {
         });
 
         const data2 = async () => {
-
             await onValue(ref(db, `${currentuser}/`), (snapshot) => {
                 // to get data acc too user uid
                 snapshot.forEach(childSnap => {
                     const datak = childSnap.key
+                    // getting user uid from database
                     // const data = childSnap.val()
                     childSnap.forEach(ad => {
                         const key = ad.key
                         // setkey(key)
                         const data = ad.val().Saved_R
+                        // comparing uid from  database to current user uid
                         if (datak === currentuser) {
                             // key = ad.key
                             setkey(ukey => [...ukey, key])
                             //  nkey = ad.key
                             console.log("in", key)
+                            // get recipe id from database and store it on record variable
                             records.push({ data, key });
                         }
                     })
                 })
-                console.log(records)
+                // console.log(records)
                 if (records !== null) {
                     Object.values(records).map(async (todo) => {
                         setList((oldArray) => [...oldArray, todo])
@@ -62,7 +64,6 @@ const SavedRecipe = () => {
                                 throw new Error(`Error! status: ${response.status}`);
                             }
                             const result = await response.json();
-
                             // add recipe details and key to delete the recipe
                             const key = todo.key
                             setData((recipe) => [...recipe, { result, key }])
@@ -81,14 +82,14 @@ const SavedRecipe = () => {
         return () => {
             listen();
         };
-    }, [])
-    console.log(data)
+    },[])
+    // console.log(data)
     //  to remove the recipe from the list
     const D_recipe = async (todo) => {
         console.log(todo);
         await remove(ref(db, `${authUser.uid}/${todo}`));
-        alert("Removed from saved Recipe")
-        window.location.reload();
+        alert("Removed from saved Recipe.")
+        navigate("/")  
     };
 
     return (
@@ -97,7 +98,7 @@ const SavedRecipe = () => {
             <div className='Display_R'>
                 {authUser ? (
                     <> {status ? "Loading..." : ""}
-                        {err ? (<h3>{err}</h3>) : (list.length > 0 ? '' : <h3>Not Saved recipe</h3>)}
+                        {err ? (<h3>{err}</h3>) : (data.length > 0 ? '' : <h3>Not Saved recipe</h3>)}
                         {data.map((data1, index) => {
                             return (
                                 <div key={index} className="S_RecipesList">
